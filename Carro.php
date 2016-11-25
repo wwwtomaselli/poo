@@ -1,4 +1,5 @@
 <?php
+require_once './Motor.php';
 
 class Carro
 {
@@ -6,15 +7,26 @@ class Carro
 	const MODELO = "A3";
 
 	public $cor;
-	private $motor = 1.0;
+	/**
+         *
+         * @var Motor
+         */
+        private $motor;
 	private $porta = 4;
 	private $tanqueCombustivel = 0.0;
 	
 	//se nao informado na chamada do metodo construtor, 
 	//o parametro $cor recebe "branco"
-	public function __construct($cor = "branco")
+	
+        /**
+         * 
+         * @param Motor $motor
+         * @param string $cor
+         */
+        public function __construct(Motor $motor, $cor = "branco")
 	{
 		$this->cor = $cor;
+                $this->motor = $motor;
 		$this->tanqueCombustivel = 10.0;
 		
 	}
@@ -27,10 +39,33 @@ class Carro
 	{
 	}
 	
-	public function andar()
+	/**
+         * Faz o carro andar
+         * @param float $torque 
+         */
+        private function andar($torque)
 	{
+            echo "Andou " . $torque . " metros\n";
 	}
 	
+        /**
+         * Enviar aceleracao ao motor
+         * @param int $intensidade Valor da aceleracao de 0 a 100
+         */
+        public function acelerar($intensidade)
+        {
+            $torque = $this->motor->acelerar($intensidade);
+            $this->andar($torque);
+        }
+        
+        public function frear()
+        {
+        }
+
+        /**
+         * Abastecer o carro
+         * @param float $litros Quantidade de combustivel em litros
+         */
 	public function abastecer($litros)
 	{
 		$this->tanqueCombustivel += $litros;
