@@ -5,6 +5,8 @@ require_once "./Motor.php";
 //include: arquivo nao obrigatorio  (exemplo: um template)
 //once: nao executa novamente o arquivo caso ja tenha sido incluido alguma vez
 
+//Shift + F6: executar o servidor do PHP
+
 /*
  
 $veiculo2 = new Carro();

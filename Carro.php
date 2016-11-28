@@ -72,3 +72,5 @@ class Carro
 	}
 }
 
+// https://git-scm.com/book/pt-br/v1
+// https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf
