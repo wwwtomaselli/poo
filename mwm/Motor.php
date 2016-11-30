@@ -1,17 +1,18 @@
 <?php
 namespace MWM;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+use \POO\Motor\InterfaceMotor;
 
 /**
  * Description of Motor
  *
  * @author aluno
  */
-class Motor {
-    //put your code here
+class Motor implements InterfaceMotor
+{
+    public function acelerar($intensidade = 0) {
+        return $intensidade;
+    }
+
+//put your code here
 }

@@ -11,7 +11,9 @@ use MWM\Motor as MotorMWM;
  */
 //final class: nao permite ser classe base para heranca
 //classe Motor18 eh derivada da classe base Motor
-final class Motor18 extends Motor //MotorMWM
+//uma classe pode implementar mais de uma interface
+//uma classe derivada pode extender apenas uma classe base
+final class Motor18 extends Motor implements \JsonSerializable, \Countable
 {
     const POTENCIA = 1.8;
     
@@ -34,4 +36,20 @@ final class Motor18 extends Motor //MotorMWM
             return $torque;
         }
     }
+    
+    public function jsonSerialize() 
+    {
+        return array
+        (
+            "potencia" => self::POTENCIA,
+            "nitro" => $this-> nitro
+        );
+    }
+    
+    public function count() 
+    {
+        return $this->aceleracao;
+    }
+
+
 }

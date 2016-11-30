@@ -1,6 +1,5 @@
-http://www.bemparana.com.br/politicaemdebate/index.php/2016/11/28/camara-volta-a-rejeitar-titulo-para-instituto-de-defesa-dos-direitos-lgbt/
-http://www.bemparana.com.br/noticia/476617/trabalhadores-da-limpeza-publica-de-curitiba-podem-entrar-em-greve
-http://www.bemparana.com.br/plantaodepolicia/acusado-de-assedio-no-inter-2-homem-e-agredido-em-terminal-veja-video/
-http://www.bemparana.com.br/noticia/476540/coral-do-palacio-avenida-promete-viagem-de-luz.-veja-video-do-ensaio
-http://www.bemparana.com.br/fotos/653/parana-clube-0-x-2-tupi
-oioioi
+/usr/bin/php -S localhost:8000
+http://www.bemparana.com.br/noticia/476990/netflix-libera-download-de-series
+http://www.bemparana.com.br/noticia/477058/criador-do-big-mac-michael-jim-delligatti-morre-aos-98-anos
+http://www.bemparana.com.br/noticia/477065/aplicativo-brasileiro-t81-concorrente-ao-uber-chega-a-curitiba
+http://www.bemparana.com.br/noticia/477071/curitiba-pode-amanhecer-com-parte-dos-onibus-parados-nesta-quinta-feira

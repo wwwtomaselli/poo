@@ -2,6 +2,7 @@
 namespace POO\Veiculos;
 
 use POO\Motor\Motor;
+use POO\Motor\InterfaceMotor;
 
 class Carro
 {
@@ -25,7 +26,7 @@ class Carro
          * @param Motor $motor
          * @param string $cor
          */
-        public function __construct(Motor $motor, $cor = "branco")
+        public function __construct(InterfaceMotor $motor, $cor = "branco")
 	{
 		$this->cor = $cor;
                 $this->motor = $motor;
@@ -33,12 +34,14 @@ class Carro
 		
 	}
 	
-	public function ligar()
+	public function ligarDesligar()
 	{
-	}
-	
-	public function desligar()
-	{
+            if($this->motor->estaLigado())
+            {
+                $this->motor->desligar();
+            } else {
+                $this->motor->ligar();
+            }
 	}
 	
 	/**
@@ -56,8 +59,13 @@ class Carro
          */
         public function acelerar($intensidade)
         {
-            $torque = $this->motor->acelerar($intensidade);
-            $this->andar($torque);
+            try
+            {
+                $torque = $this->motor->acelerar($intensidade);
+                $this->andar($torque);
+            } catch (\Exception $e) {
+                echo $e->getMessage();
+            }
         }
         
         public function frear()
