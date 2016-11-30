@@ -1,6 +1,9 @@
 <pre><?php
-require_once "./Carro.php";
-require_once "./Motor.php";
+require_once "veiculos/Carro.php";
+require_once "motor/Motor.php";
+require_once "motor/Motor18.php";
+require_once 'motor/MotorTurbo.php';
+
 //require: arquivo obrigatorio (exemplo: uma classe)
 //include: arquivo nao obrigatorio  (exemplo: um template)
 //once: nao executa novamente o arquivo caso ja tenha sido incluido alguma vez
@@ -43,10 +46,26 @@ $veiculo3->abastecer(15);
 echo "\n\n\n" . $veiculo2::MARCA . " " . $veiculo2::MODELO . "\n"; 
  */
 
-$motor = new Motor();
+$motor = new \POO\Motor\Motor18();
+$motorTurbo = new \POO\Motor\MotorTurbo();
 //$motor = "motor";
-$veiculo1 = new Carro($motor, "vermelho");
+$veiculo1 = new \POO\Veiculos\Carro($motor, "vermelho");
+$veiculo2 = new \POO\Veiculos\Carro($motor);
+$veiculo3 = new \POO\Veiculos\Carro($motorTurbo, "amarelo");
 
-$veiculo1->acelerar(40);
 var_dump($veiculo1);
-echo "Potencia do motor: " . Motor::POTENCIA;
+$veiculo1->acelerar(40);
+echo "\nPotencia do motor: " . \POO\Motor\Motor::POTENCIA;
+echo "\n\n\n";
+
+var_dump($veiculo2);
+$veiculo2->acelerar(40);
+echo "\nPotencia do motor: " . \POO\Motor\Motor18::POTENCIA;
+echo "\n\n\n";
+
+var_dump($veiculo3);
+$veiculo3->acelerar(40);
+echo "\nPotencia do motor: " . \POO\Motor\MotorTurbo::POTENCIA;
+echo "\n\n\n";
+$veiculo3->estacionar();
+$veiculo1->tanqueCombustivel = 120;

@@ -1,5 +1,7 @@
 <?php
-require_once './Motor.php';
+namespace POO\Veiculos;
+
+use POO\Motor\Motor;
 
 class Carro
 {
@@ -70,6 +72,26 @@ class Carro
 	{
 		$this->tanqueCombustivel += $litros;
 	}
+        
+        /**
+         * Sobrecarga de metodo
+         * @param type $name
+         * @param type $arguments
+         */
+        public function __call($name, $arguments) 
+        {
+            echo "Favor adquirir o opcional:  $name.\n\n";
+        }
+        
+        /**
+         * Sobrecarga de atributo
+         * @param type $name
+         */
+        public function __set($name, $value)
+        {
+            // $this->$name = $value //Permite informar o valor ao atributo
+            echo "Vedado informar o valor $value ao atributo $name .\n\n";
+        }
 }
 
 // https://git-scm.com/book/pt-br/v1

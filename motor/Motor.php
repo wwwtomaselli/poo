@@ -1,16 +1,18 @@
 <?php
+namespace POO\Motor;
 
 /**
  * 
- * Classe generica de motor
- * @author Eu Mesmo
+ * Classe abstrata de motor
+ * @author CursoPHP2
  * @link https://github.com/wwwtomaselli/POO
  */
-class Motor 
+//classe abstrata nao pode ser instanciada, serve como base para derivar outras
+abstract class Motor 
 {
     const POTENCIA = 1.0;
     private $tipoCombustivel = "Flex";
-    private $aceleracao = 0;
+    protected $aceleracao = 0;
     
     /**
      * Acelerar o motor do carro
