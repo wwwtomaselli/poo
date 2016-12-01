@@ -1,5 +1,3 @@
 /usr/bin/php -S localhost:8000
-http://www.bemparana.com.br/noticia/476990/netflix-libera-download-de-series
-http://www.bemparana.com.br/noticia/477058/criador-do-big-mac-michael-jim-delligatti-morre-aos-98-anos
-http://www.bemparana.com.br/noticia/477065/aplicativo-brasileiro-t81-concorrente-ao-uber-chega-a-curitiba
-http://www.bemparana.com.br/noticia/477071/curitiba-pode-amanhecer-com-parte-dos-onibus-parados-nesta-quinta-feira
+https://novatec.com.br/livros/padroes-projeto-php/
+https://novatec.com.br/livros/php-moderno/

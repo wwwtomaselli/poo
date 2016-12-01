@@ -15,7 +15,7 @@ class Carro
          * @var Motor
          */
         private $motor;
-	private $porta = 4;
+	protected $porta = 4;
 	private $tanqueCombustivel = 0.0;
 	
 	//se nao informado na chamada do metodo construtor, 
@@ -104,3 +104,9 @@ class Carro
 
 // https://git-scm.com/book/pt-br/v1
 // https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf
+// https://designpatternsphp.readthedocs.io
+// https://packagist.org/
+// https://getcomposer.org/ 
+// (https://getcomposer.org/composer.phar: 
+//  tornar executavel ou evocar como 'php composer.phar')
+// http://swiftmailer.org/
